@@ -19,13 +19,13 @@ class RedisCacheTest extends TestCase
             $this->markTestSkipped('Redis extension required');
         }
 
-        try {
-            $result = new Redis();
-            $result->getLastError();
-        }
-        catch (RedisException $e) {
-            $this->markTestSkipped('Cannot connect to Redis, check auth credentials');
-        }
+        // try {
+        //     $redis = new Redis();
+        //     $redis->getLastError();
+        // }
+        // catch (RedisException $e) {
+        //     $this->markTestSkipped('Cannot connect to Redis, check auth credentials');
+        // }
     }
 
     public function tearDown()
